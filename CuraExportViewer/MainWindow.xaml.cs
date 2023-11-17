@@ -11,6 +11,7 @@ using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using System.IO;
 using Path = System.IO.Path;
+using System.ComponentModel;
 
 namespace CuraExportViewer
 {
@@ -23,8 +24,9 @@ namespace CuraExportViewer
     {
         public ObservableCollection<string> CsvFiles { get; set; }
         public ObservableCollection<CsvData> CsvDataList { get; set; }
+        public ICollectionView CsvDataView { get; set; }
 
-        private string folderPath = @"D:\Private\3Dprint";
+        private string folderPath = @"..\..\..\TestData";
 
         public MainWindow()
         {
@@ -32,15 +34,13 @@ namespace CuraExportViewer
 
             CsvFiles = new ObservableCollection<string>();
             CsvDataList = new ObservableCollection<CsvData>();
+            CsvDataView = CollectionViewSource.GetDefaultView(CsvDataList);
 
             // Set the ListBox item source
             csvListBox.ItemsSource = CsvFiles;
 
             // Set the DataGrid item source
-            csvDataGrid.ItemsSource = CsvDataList;
-
-            // Specify the folder path where your CSV files are located
-            
+            csvDataGrid.ItemsSource = CsvDataView;
 
             // Populate the ListBox with CSV files
             foreach (string filePath in Directory.EnumerateFiles(folderPath, "*.csv"))
@@ -50,6 +50,9 @@ namespace CuraExportViewer
 
             // Handle selection changed event
             csvListBox.SelectionChanged += CsvListBox_SelectionChanged;
+
+            // Group the DataGrid by "Section"
+            CsvDataView.GroupDescriptions.Add(new PropertyGroupDescription("Section"));
         }
 
         private void CsvListBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)

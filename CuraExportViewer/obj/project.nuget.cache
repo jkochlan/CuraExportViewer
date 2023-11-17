@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jzfA8WOxM6c0VuDx/iZlW6MSQORebUr2RaZqfTs3rVkdjTAXeFW8DoY6zj3o+x5DjaqCIg2X4qiYuZ4oyta+2A==",
+  "dgSpecHash": "UDIUhP39JfNYzbanucNyoeaHyyA12Te53CEiIer9epVbaLppGdFf8fsGTqk3D3oJIsda6IEuNH8sl42pss9k6Q==",
   "success": true,
-  "projectFilePath": "D:\\Private\\dotNET\\CuraExportViewer\\CuraExportViewer\\CuraExportViewer.csproj",
+  "projectFilePath": "D:\\Projects\\CuraExportViewer\\CuraExportViewer\\CuraExportViewer\\CuraExportViewer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Private\\dotNET\\CuraExportViewer\\CuraExportViewer\\CuraExportViewer.csproj",
+      "projectUniqueName": "D:\\Projects\\CuraExportViewer\\CuraExportViewer\\CuraExportViewer\\CuraExportViewer.csproj",
       "projectName": "CuraExportViewer",
-      "projectPath": "D:\\Private\\dotNET\\CuraExportViewer\\CuraExportViewer\\CuraExportViewer.csproj",
+      "projectPath": "D:\\Projects\\CuraExportViewer\\CuraExportViewer\\CuraExportViewer\\CuraExportViewer.csproj",
       "packagesPath": "C:\\Users\\janko\\.nuget\\packages\\",
-      "outputPath": "D:\\Private\\dotNET\\CuraExportViewer\\CuraExportViewer\\obj\\",
+      "outputPath": "D:\\Projects\\CuraExportViewer\\CuraExportViewer\\CuraExportViewer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\janko\\AppData\\Roaming\\NuGet\\NuGet.Config",
