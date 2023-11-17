@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CuraExportViewer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4cb1b9f0e60242241738e3b04e83550cede97513")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c18d6803ad62afa820b92dc96dfe0e6b9933c08")]
 [assembly: System.Reflection.AssemblyProductAttribute("CuraExportViewer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CuraExportViewer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

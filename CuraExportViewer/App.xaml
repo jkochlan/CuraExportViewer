@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:CuraExportViewer"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style TargetType="Window">
+        <!--<Style TargetType="Window">
             <Setter Property="Background" Value="#EFEFEF"/>
             <Setter Property="FontFamily" Value="Segoe UI"/>
             <Setter Property="FontSize" Value="12"/>
@@ -15,10 +15,10 @@
             <Setter Property="Background" Value="#D9EBFF"/>
             <Setter Property="BorderBrush" Value="#0066CC"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Margin" Value="10"/>  
             <Setter Property="Padding" Value="5"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>  
         </Style>
 
         <Style TargetType="DataGrid">
@@ -29,6 +29,6 @@
             <Setter Property="Padding" Value="5"/>
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
             <Setter Property="VerticalAlignment" Value="Stretch"/>
-        </Style>
+        </Style>-->
     </Application.Resources>
 </Application>

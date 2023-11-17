@@ -15,4 +15,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\compareIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\compareIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

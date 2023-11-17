@@ -28,8 +28,6 @@ D:\Projects\CuraExportViewer\CuraExportViewer\CuraExportViewer\obj\Debug\net8.0-
 D:\Projects\CuraExportViewer\CuraExportViewer\CuraExportViewer\obj\Debug\net8.0-windows\MainWindow.g.cs
 D:\Projects\CuraExportViewer\CuraExportViewer\CuraExportViewer\obj\Debug\net8.0-windows\App.g.cs
 D:\Projects\CuraExportViewer\CuraExportViewer\CuraExportViewer\obj\Debug\net8.0-windows\CuraExportViewer_MarkupCompile.cache
-D:\Projects\CuraExportViewer\CuraExportViewer\CuraExportViewer\obj\Debug\net8.0-windows\CuraExportViewer_MarkupCompile.lref
-D:\Projects\CuraExportViewer\CuraExportViewer\CuraExportViewer\obj\Debug\net8.0-windows\App.baml
 D:\Projects\CuraExportViewer\CuraExportViewer\CuraExportViewer\obj\Debug\net8.0-windows\CuraExportViewer.g.resources
 D:\Projects\CuraExportViewer\CuraExportViewer\CuraExportViewer\obj\Debug\net8.0-windows\CuraExportViewer.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projects\CuraExportViewer\CuraExportViewer\CuraExportViewer\obj\Debug\net8.0-windows\CuraExportViewer.AssemblyInfoInputs.cache
@@ -41,3 +39,5 @@ D:\Projects\CuraExportViewer\CuraExportViewer\CuraExportViewer\obj\Debug\net8.0-
 D:\Projects\CuraExportViewer\CuraExportViewer\CuraExportViewer\obj\Debug\net8.0-windows\CuraExportViewer.pdb
 D:\Projects\CuraExportViewer\CuraExportViewer\CuraExportViewer\obj\Debug\net8.0-windows\CuraExportViewer.genruntimeconfig.cache
 D:\Projects\CuraExportViewer\CuraExportViewer\CuraExportViewer\obj\Debug\net8.0-windows\ref\CuraExportViewer.dll
+D:\Projects\CuraExportViewer\CuraExportViewer\CuraExportViewer\bin\Debug\net8.0-windows\Resources\compareIcon.png
+D:\Projects\CuraExportViewer\CuraExportViewer\CuraExportViewer\obj\Debug\net8.0-windows\CuraExportViewer_Content.g.cs
