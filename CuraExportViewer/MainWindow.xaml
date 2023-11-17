@@ -1,0 +1,19 @@
+﻿<Window x:Class="CuraExportViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CSV Viewer" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox x:Name="csvListBox" Grid.Column="0" Margin="10">
+            <!-- Bind this to a collection of CSV files -->
+        </ListBox>
+
+        <DataGrid x:Name="csvDataGrid" Grid.Column="1" Margin="10">
+            <!-- Bind this to the data of the selected CSV file -->
+        </DataGrid>
+    </Grid>
+</Window>
