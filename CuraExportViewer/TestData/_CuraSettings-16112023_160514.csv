@@ -1,13 +1,12 @@
 Section;Extruder;Key;Type;Value
-general;0;Date;str;16/11/2023 20:03:14
-general;0;Os;str;Windows 10.0.22631
+general;0;Date;str;16/11/2023 16:05:14
 general;0;Cura_Version;str;5.5.0
 general;0;Profile;str;empty
 general;0;Quality;str;Standard Quality
-general;0;Extruder_Count;int;1
+general;0;Extruder_Count;int;2
 resolution;1;layer_height;float;0.2
 resolution;1;layer_height_0;float;0.2
-resolution;1;line_width;float;0.4
+resolution;1;line_width;float;0.6
 resolution;1;wall_line_width;float;0.4
 resolution;1;wall_line_width_0;float;0.4
 resolution;1;wall_line_width_x;float;0.4
@@ -26,7 +25,7 @@ shell;1;wall_0_inset;float;0
 shell;1;optimize_wall_printing_order;bool;True
 shell;1;inset_direction;enum;inside_out
 shell;1;alternate_extra_perimeter;bool;False
-shell;1;min_wall_line_width;float;0.34
+shell;1;min_wall_line_width;float;0.40
 shell;1;min_even_wall_line_width;float;0.34
 shell;1;min_odd_wall_line_width;float;0.34
 shell;1;fill_outline_gaps;bool;False

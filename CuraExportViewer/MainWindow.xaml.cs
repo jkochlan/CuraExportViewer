@@ -63,7 +63,7 @@ namespace CuraExportViewer
             csvDataGrid2.ItemsSource = CsvDataView2;
 
             var fileList = Directory.EnumerateFiles(folderPath, "*.csv")
-                                    .OrderByDescending(fileName => ExtractCreationDate(fileName))
+                                    .OrderByDescending(fileName => ExtractCreationDateFromFileName(fileName))
                                     .ToList();
 
             // Populate the ListBox with CSV files
@@ -211,10 +211,10 @@ namespace CuraExportViewer
                     try
                     {
                         // Get the creation date and time of the original file
-                        DateTime creationDateTime = File.GetCreationTime(originalFilePath);
+                        DateTime creationDateTime = ExtractCreationDateFromCsvContent(originalFilePath);
 
                         // Create a new file name with the creation date and time
-                        string newFileName = $"_CuraSettings-{creationDateTime:yyyyMMdd_HHmmss}.csv";
+                        string newFileName = $"_CuraSettings-{creationDateTime:ddMMyyyy_HHmmss}.csv";
 
                         // Build the full path to the new file
                         string newFilePath = Path.Combine(directoryPath, newFileName);
@@ -232,37 +232,48 @@ namespace CuraExportViewer
             }
         }
 
-        private void OrderFilesByCreationDate(ListView listView)
+        private DateTime ExtractCreationDateFromFileName(string fileName)
         {
-            // Assuming each item in the ListView is a file name (string)
-            List<string> fileNames = listView.Items.Cast<string>().ToList();
-
-            // Order the file names based on the embedded creation date
-            var orderedFileNames = fileNames
-                .OrderBy(fileName => ExtractCreationDate(fileName))
-                .ToList();
-
-            // Update the ListView with the ordered file names
-            listView.Items.Clear();
-            foreach (var fileName in orderedFileNames)
-            {
-                listView.Items.Add(fileName);
-            }
-        }
-
-        private DateTime ExtractCreationDate(string fileName)
-        {
-            // Assuming the date format is "yyyyMMdd_HHmmss"
             string dateString = fileName.Substring(fileName.IndexOf('-') + 1, 15);
 
             // Parse the date string to a DateTime object
-            if (DateTime.TryParseExact(dateString, "yyyyMMdd_HHmmss", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime creationDate))
+            if (DateTime.TryParseExact(dateString, "ddMMyyyy_HHmmss", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime creationDate))
             {
                 return creationDate;
             }
 
             // Return DateTime.MinValue if parsing fails
             return DateTime.MinValue;
+        }
+
+        private DateTime ExtractCreationDateFromCsvContent(string filePath)
+        {
+            try
+            {
+                // Read the first two lines of the CSV file
+                string[] lines = File.ReadLines(filePath).Take(2).ToArray();
+
+                // Assuming the CSV structure is consistent and the creation date is in the second row, last column
+                string[] fields = lines.Last().Split(';');
+
+                // Assuming the creation date is in a specific format, adjust the format as needed
+                string dateString = fields.Last().Trim();
+
+                // Parse the date string to a DateTime object
+                if (DateTime.TryParseExact(dateString, "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime creationDate))
+                {
+                    return creationDate;
+                }
+
+                // Return DateTime.MinValue if parsing fails
+                return DateTime.MinValue;
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that may occur during the extraction
+                MessageBox.Show($"Error extracting creation date from CSV file: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return DateTime.MinValue;
+            }
         }
     }
 
