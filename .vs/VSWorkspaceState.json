@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CuraExportViewer",
+    "\\CuraExportViewer\\Resources"
   ],
-  "SelectedNode": "\\CuraExportViewer.sln",
+  "SelectedNode": "\\CuraExportViewer\\MainWindow.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

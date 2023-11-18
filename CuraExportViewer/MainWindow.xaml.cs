@@ -12,6 +12,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using Path = System.IO.Path;
 using System.ComponentModel;
+using System.Globalization;
 
 namespace CuraExportViewer
 {
@@ -44,6 +45,8 @@ namespace CuraExportViewer
             this.Height = (System.Windows.SystemParameters.PrimaryScreenHeight * 0.80);
             this.Width = (System.Windows.SystemParameters.PrimaryScreenWidth * 0.80);
 
+            RenameFiles(folderPath);
+
             InitializeComponent();
 
             CsvFiles = new ObservableCollection<string>();
@@ -59,8 +62,12 @@ namespace CuraExportViewer
             csvDataGrid.ItemsSource = CsvDataView;
             csvDataGrid2.ItemsSource = CsvDataView2;
 
+            var fileList = Directory.EnumerateFiles(folderPath, "*.csv")
+                                    .OrderByDescending(fileName => ExtractCreationDate(fileName))
+                                    .ToList();
+
             // Populate the ListBox with CSV files
-            foreach (string filePath in Directory.EnumerateFiles(folderPath, "*.csv"))
+            foreach (string filePath in fileList)
             {
                 CsvFiles.Add(Path.GetFileName(filePath));
             }
@@ -185,6 +192,77 @@ namespace CuraExportViewer
                 && data1.Key == data2.Key
                 && data1.Type == data2.Type
                 && data1.Value == data2.Value;
+        }
+
+        private void RenameFiles(string directoryPath)
+        {
+            // Iterate through each item in the ListView
+            foreach (var item in Directory.GetFiles(directoryPath))
+            {
+                // Assuming each item is a file name (string)
+                string fileName = item.ToString();
+
+                // Check if the file name starts with an underscore
+                if (!Path.GetFileNameWithoutExtension(fileName).StartsWith("_"))
+                {
+                    // Build the full path to the original file
+                    string originalFilePath = fileName;
+
+                    try
+                    {
+                        // Get the creation date and time of the original file
+                        DateTime creationDateTime = File.GetCreationTime(originalFilePath);
+
+                        // Create a new file name with the creation date and time
+                        string newFileName = $"_CuraSettings-{creationDateTime:yyyyMMdd_HHmmss}.csv";
+
+                        // Build the full path to the new file
+                        string newFilePath = Path.Combine(directoryPath, newFileName);
+
+                        // Rename the file
+                        File.Move(originalFilePath, newFilePath);
+                    }
+                    catch (Exception ex)
+                    
+                    {
+                        // Handle any exceptions that may occur during file renaming
+                        MessageBox.Show($"Error renaming file {fileName}: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+            }
+        }
+
+        private void OrderFilesByCreationDate(ListView listView)
+        {
+            // Assuming each item in the ListView is a file name (string)
+            List<string> fileNames = listView.Items.Cast<string>().ToList();
+
+            // Order the file names based on the embedded creation date
+            var orderedFileNames = fileNames
+                .OrderBy(fileName => ExtractCreationDate(fileName))
+                .ToList();
+
+            // Update the ListView with the ordered file names
+            listView.Items.Clear();
+            foreach (var fileName in orderedFileNames)
+            {
+                listView.Items.Add(fileName);
+            }
+        }
+
+        private DateTime ExtractCreationDate(string fileName)
+        {
+            // Assuming the date format is "yyyyMMdd_HHmmss"
+            string dateString = fileName.Substring(fileName.IndexOf('-') + 1, 15);
+
+            // Parse the date string to a DateTime object
+            if (DateTime.TryParseExact(dateString, "yyyyMMdd_HHmmss", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime creationDate))
+            {
+                return creationDate;
+            }
+
+            // Return DateTime.MinValue if parsing fails
+            return DateTime.MinValue;
         }
     }
 
