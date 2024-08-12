@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Migrations.DAL", "Migrations.DAL\Migrations.DAL.csproj", "{62A22F3E-C508-4C10-8279-EE650B1A0906}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Migrations.Tool", "Migrations.Tool\Migrations.Tool.csproj", "{06A6F560-00A6-46C1-A4A4-B238EEDFC321}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62A22F3E-C508-4C10-8279-EE650B1A0906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62A22F3E-C508-4C10-8279-EE650B1A0906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62A22F3E-C508-4C10-8279-EE650B1A0906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62A22F3E-C508-4C10-8279-EE650B1A0906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06A6F560-00A6-46C1-A4A4-B238EEDFC321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06A6F560-00A6-46C1-A4A4-B238EEDFC321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06A6F560-00A6-46C1-A4A4-B238EEDFC321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06A6F560-00A6-46C1-A4A4-B238EEDFC321}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFB10242-F40C-467B-B845-3C589101F520}
+	EndGlobalSection
+EndGlobal

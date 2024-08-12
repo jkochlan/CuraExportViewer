@@ -1,0 +1,15 @@
+D:\Private\dotNet\Playground\Playground\bin\Debug\net6.0\Playground.exe
+D:\Private\dotNet\Playground\Playground\bin\Debug\net6.0\Playground.deps.json
+D:\Private\dotNet\Playground\Playground\bin\Debug\net6.0\Playground.runtimeconfig.json
+D:\Private\dotNet\Playground\Playground\bin\Debug\net6.0\Playground.dll
+D:\Private\dotNet\Playground\Playground\bin\Debug\net6.0\Playground.pdb
+D:\Private\dotNet\Playground\Playground\obj\Debug\net6.0\Playground.GeneratedMSBuildEditorConfig.editorconfig
+D:\Private\dotNet\Playground\Playground\obj\Debug\net6.0\Playground.AssemblyInfoInputs.cache
+D:\Private\dotNet\Playground\Playground\obj\Debug\net6.0\Playground.AssemblyInfo.cs
+D:\Private\dotNet\Playground\Playground\obj\Debug\net6.0\Playground.csproj.CoreCompileInputs.cache
+D:\Private\dotNet\Playground\Playground\obj\Debug\net6.0\Playground.sourcelink.json
+D:\Private\dotNet\Playground\Playground\obj\Debug\net6.0\Playground.dll
+D:\Private\dotNet\Playground\Playground\obj\Debug\net6.0\refint\Playground.dll
+D:\Private\dotNet\Playground\Playground\obj\Debug\net6.0\Playground.pdb
+D:\Private\dotNet\Playground\Playground\obj\Debug\net6.0\Playground.genruntimeconfig.cache
+D:\Private\dotNet\Playground\Playground\obj\Debug\net6.0\ref\Playground.dll
