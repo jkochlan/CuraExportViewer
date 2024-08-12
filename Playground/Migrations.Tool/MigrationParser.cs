@@ -35,7 +35,7 @@ namespace Migrations.Tool
 
             foreach (var migrationType in migrationTypes)
             {
-                Console.WriteLine($"Analyzing Migration: {migrationType.Name}");
+                Console.WriteLine($"\nAnalyzing Migration: {migrationType.Name}");
 
                 var migration = (DbMigration)Activator.CreateInstance(migrationType);
                 var actions = analyzer.AnalyzeMigration(migration);

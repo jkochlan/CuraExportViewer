@@ -18,3 +18,4 @@ D:\Private\dotNet\Playground\Migrations.DAL\obj\Debug\net6.0\Migrations.DAL.cspr
 D:\Private\dotNet\Playground\Migrations.DAL\obj\Debug\net6.0\Migrations.DAL.Migrations.Add_Student_Fields.resources
 D:\Private\dotNet\Playground\Migrations.DAL\obj\Debug\net6.0\Migrations.DAL.Migrations.Add_UnnecessaryColumnsToStudent.resources
 D:\Private\dotNet\Playground\Migrations.DAL\obj\Debug\net6.0\Migrations.DAL.Migrations.Remove_unnecessaryColumnsFromStudent.resources
+D:\Private\dotNet\Playground\Migrations.DAL\obj\Debug\net6.0\Migrations.DAL.Migrations.Rename_StudentColumn.resources
