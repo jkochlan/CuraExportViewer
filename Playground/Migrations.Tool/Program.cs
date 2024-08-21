@@ -1,7 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using Migrations.DAL;
 using Migrations.Tool;
 
-Console.WriteLine("Welcome in this migration parser stuff");
+//Console.WriteLine("Welcome in this migration parser stuff");
 
-var parser = new MigrationAnalyzer();
-parser.AnalyzeMigrations();
+//var parser = new MigrationAnalyzer();
+//parser.AnalyzeMigrations();
+
+DataAPI.AddInterceptor(new ColumnTrackingInterceptor());
+var inter = DataAPI.ReturnDbInterceptors();
+
+Console.WriteLine("Applying interceptor:");
