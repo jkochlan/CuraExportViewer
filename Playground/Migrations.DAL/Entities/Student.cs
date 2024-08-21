@@ -14,5 +14,7 @@ namespace Migrations.DAL.Entities
 
         public int Age { get; set; }
 
+        public string Address { get; set; }
+
     }
 }
