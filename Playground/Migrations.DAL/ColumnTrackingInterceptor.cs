@@ -60,14 +60,26 @@ namespace Migrations.DAL
             using (var context = new DataContext())
             {
                 // Uloženie informácií do sledovacej tabuľky
-                context.DBChanges.Add(new DBChange
+                //context.DBChanges.Add(new DBChange
+                //{
+                //    TableName = tableName,
+                //    ColumnName = columnInfo.ColumnName,
+                //    ColumnType = columnInfo.ColumnType,
+                //    CreatedAt = DateTime.Now
+                //});
+                //context.SaveChanges();
+
+                context.ChangeLogs.Add(new ChangeLog
                 {
-                    TableName = tableName,
-                    ColumnName = columnInfo.ColumnName,
-                    ColumnType = columnInfo.ColumnType,
-                    CreatedAt = DateTime.Now
+                    ChangeType = System.Data.Entity.EntityState.Added,
+                    ChangeDate = DateTime.Now,
+                    ChangeContext = Guid.NewGuid(),
+                    Entity = "DBChange",
+                    Property = "ColumnName",
+                    OldValue = null,
+                    NewValue = columnInfo.ColumnName,
+                    IsIncrementalValidated = null
                 });
-                context.SaveChanges();
             }
         }
     }

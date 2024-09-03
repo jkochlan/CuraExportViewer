@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Migrations.DAL.Entities
 {
-    public class Class : IEntity
+    public class DbChangesLog : IEntity
     {
         public int Id { get; set; }
+
+        public string Description { get; set; }
     }
 }

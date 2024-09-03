@@ -19,3 +19,7 @@ D:\Private\dotNet\Playground\Migrations.DAL\obj\Debug\net6.0\Migrations.DAL.Migr
 D:\Private\dotNet\Playground\Migrations.DAL\obj\Debug\net6.0\Migrations.DAL.Migrations.Add_UnnecessaryColumnsToStudent.resources
 D:\Private\dotNet\Playground\Migrations.DAL\obj\Debug\net6.0\Migrations.DAL.Migrations.Remove_unnecessaryColumnsFromStudent.resources
 D:\Private\dotNet\Playground\Migrations.DAL\obj\Debug\net6.0\Migrations.DAL.Migrations.Rename_StudentColumn.resources
+D:\Private\dotNet\Playground\Migrations.DAL\obj\Debug\net6.0\Migrations.DAL.Migrations.Add_DBChangeTable.resources
+D:\Private\dotNet\Playground\Migrations.DAL\obj\Debug\net6.0\Migrations.DAL.Migrations.InterceptorTest1.resources
+D:\Private\dotNet\Playground\Migrations.DAL\obj\Debug\net6.0\Migrations.DAL.Migrations.NewColumnsForDBChange.resources
+D:\Private\dotNet\Playground\Migrations.DAL\obj\Debug\net6.0\Migrations.DAL.Migrations.AddChangeLogTable.resources

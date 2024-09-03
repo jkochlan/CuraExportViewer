@@ -7,7 +7,11 @@ using Migrations.Tool;
 //var parser = new MigrationAnalyzer();
 //parser.AnalyzeMigrations();
 
-DataAPI.AddInterceptor(new ColumnTrackingInterceptor());
-var inter = DataAPI.ReturnDbInterceptors();
+//DataAPI.AddInterceptor(new ColumnTrackingInterceptor());
+//var inter = DataAPI.ReturnDbInterceptors();
 
-Console.WriteLine("Applying interceptor:");
+//Console.WriteLine("Applying interceptor:");
+
+var allIneedToDo = new AllINeedToDo();
+var res = allIneedToDo.GetEntityTypeFromTableName(new DataContext(), "Students");
+Console.WriteLine(res);

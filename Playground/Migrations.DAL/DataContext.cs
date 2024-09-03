@@ -28,6 +28,8 @@ namespace Migrations.DAL
 
         public DbSet<DBChange> DBChanges { get; set; }
 
+        public DbSet<ChangeLog> ChangeLogs { get; set; }    
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
